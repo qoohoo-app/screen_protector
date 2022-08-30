@@ -1,8 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-abstract class LifecycleState<T extends StatefulWidget> extends State<T>
-    with WidgetsBindingObserver {
+abstract class LifecycleState<T extends StatefulWidget> extends State<T> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();

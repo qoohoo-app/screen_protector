@@ -9,8 +9,7 @@ class PreventScreenshotPage extends StatefulWidget {
   _PreventScreenshotPageState createState() => _PreventScreenshotPageState();
 }
 
-class _PreventScreenshotPageState
-    extends LifecycleState<PreventScreenshotPage> {
+class _PreventScreenshotPageState extends LifecycleState<PreventScreenshotPage> {
   @override
   void initState() {
     // For iOS only.
@@ -52,24 +51,21 @@ class _PreventScreenshotPageState
     );
   }
 
-  void _preventScreenshotOn() async =>
-      await ScreenProtector.preventScreenshotOn();
+  void _preventScreenshotOn() async => await ScreenProtector.preventScreenshotOn();
 
-  void _preventScreenshotOff() async =>
-      await ScreenProtector.preventScreenshotOff();
+  void _preventScreenshotOff() async => await ScreenProtector.preventScreenshotOff();
 
   void _protectScreenOn() async => await ScreenProtector.protectDataLeakageOn();
 
-  void _protectScreenOff() async =>
-      await ScreenProtector.protectDataLeakageOff();
+  void _protectScreenOff() async => await ScreenProtector.protectDataLeakageOff();
 
   void _addListenerPreventScreenshot() async {
     ScreenProtector.addListener(() {
       // Screenshot
-      print('Screenshot:');
+      // print('Screenshot:');
     }, (isCaptured) {
       // Screen Record
-      print('Screen Record:');
+      // print('Screen Record:');
     });
   }
 
